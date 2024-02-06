@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer((request, response) => {
     response.writeHead(200, {"Content-Type": "text/plain"});
-    let op = JSON.stringify(req.headers)
+    let op = JSON.stringify(request.headers)
     response.end("Backend headers: " + op);
     // res.render('index', { title: op })
     
